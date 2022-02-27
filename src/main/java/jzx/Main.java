@@ -12,5 +12,6 @@ public class Main {
         AsciiPanel panel = ctx.getBean("mypanel",AsciiPanel.class);
         panel.showFont();
 
+        System.out.println("haha");
     }
 }
