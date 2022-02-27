@@ -1,7 +1,8 @@
 package jzx;
 
 
-import jzx.ascii.AsciiPanel;
+
+import jzx.java.asciiPanel.AsciiPanel;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
