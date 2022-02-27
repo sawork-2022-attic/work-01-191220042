@@ -2,16 +2,21 @@ package jzx;
 
 
 import jzx.ascii.AsciiPanel;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 
 public class Main {
     public static void main(String[] args) {
-        ApplicationContext ctx = new ClassPathXmlApplicationContext("config.xml");
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
 
-        AsciiPanel panel = ctx.getBean("mypanel",AsciiPanel.class);
+        ctx.scan("jzx");
+        ctx.refresh();
+
+        AsciiPanel panel = ctx.getBean("myAsciiPanel",AsciiPanel.class);
         panel.showFont();
 
-        System.out.println("haha");
+
+
     }
 }
